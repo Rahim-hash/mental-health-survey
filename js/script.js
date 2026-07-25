@@ -19,8 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
       fullNameField.classList.remove("invalid");
     }
 
+    // validate sex (radio buttons)
+    var sexOptions = document.getElementsByName("sex");
+    var sexChecked = false;
+    for (var i = 0; i < sexOptions.length; i++) {
+      if (sexOptions[i].checked) {
+        sexChecked = true;
+      }
+    }
+    var sexField = sexOptions[0].closest(".field");
+
+    if (!sexChecked) {
+      sexField.classList.add("invalid");
+      isValid = false;
+    } else {
+      sexField.classList.remove("invalid");
+    }
+
     if (isValid) {
-      console.log("full name is valid");
+      console.log("full name and sex are valid");
     }
 
   });
