@@ -47,8 +47,19 @@ document.addEventListener("DOMContentLoaded", function () {
       ageGroupField.classList.remove("invalid");
     }
 
+    // validate state
+    var state = document.getElementById("state");
+    var stateField = state.closest(".field");
+
+    if (state.value === "") {
+      stateField.classList.add("invalid");
+      isValid = false;
+    } else {
+      stateField.classList.remove("invalid");
+    }
+
     if (isValid) {
-      console.log("full name, sex, and age group are valid");
+      console.log("full name, sex, age group, and state are valid");
     }
 
   });
