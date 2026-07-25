@@ -36,8 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
       sexField.classList.remove("invalid");
     }
 
+    // validate age group
+    var ageGroup = document.getElementById("ageGroup");
+    var ageGroupField = ageGroup.closest(".field");
+
+    if (ageGroup.value === "") {
+      ageGroupField.classList.add("invalid");
+      isValid = false;
+    } else {
+      ageGroupField.classList.remove("invalid");
+    }
+
     if (isValid) {
-      console.log("full name and sex are valid");
+      console.log("full name, sex, and age group are valid");
     }
 
   });
