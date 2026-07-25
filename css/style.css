@@ -73,3 +73,118 @@ footer {
   font-size: 14px;
   padding: 20px;
 }
+
+/* form fields */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1F4040;
+  padding: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 8px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label,
+.field .group-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio-row,
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.radio-row label,
+.checkbox-row label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* range slider */
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.range-value {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: bold;
+}
+
+/* likert table */
+.likert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.likert-table th,
+.likert-table td {
+  text-align: center;
+  padding: 8px 4px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.likert-table th:first-child,
+.likert-table td:first-child {
+  text-align: left;
+}
+
+.likert-table caption {
+  text-align: left;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+/* error messages */
+.error-msg {
+  color: #b00020;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: #b00020;
+}
+
+.field.invalid .error-msg {
+  display: block;
+}
