@@ -15,7 +15,76 @@
   <main>
     <div class="card">
       <h2>Survey</h2>
-      <!-- form will go here -->
+      <form id="surveyForm" novalidate>
+
+        <fieldset>
+          <legend>Participant Information</legend>
+
+          <div class="field">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName">
+            <span class="error-msg" id="fullNameError">Please enter your full name.</span>
+          </div>
+
+          <div class="field">
+            <span class="group-label">Sex *</span>
+            <div class="radio-row">
+              <input type="radio" id="sexMale" name="sex" value="Male">
+              <label for="sexMale">Male</label>
+            </div>
+            <div class="radio-row">
+              <input type="radio" id="sexFemale" name="sex" value="Female">
+              <label for="sexFemale">Female</label>
+            </div>
+            <div class="radio-row">
+              <input type="radio" id="sexOther" name="sex" value="Prefer not to say">
+              <label for="sexOther">Prefer not to say</label>
+            </div>
+            <span class="error-msg" id="sexError">Please select an option.</span>
+          </div>
+
+          <div class="field">
+            <label for="ageGroup">Age Group *</label>
+            <select id="ageGroup" name="ageGroup">
+              <option value="">-- Select --</option>
+              <option value="Under 20">Under 20</option>
+              <option value="21-49">21 - 49</option>
+              <option value="50+">50+</option>
+            </select>
+            <span class="error-msg" id="ageGroupError">Please select your age group.</span>
+          </div>
+
+          <div class="field">
+            <label for="state">State *</label>
+            <select id="state" name="state">
+              <option value="">-- Select --</option>
+              <option value="NSW">NSW</option>
+              <option value="QLD">QLD</option>
+              <option value="VIC">VIC</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+              <option value="NT">NT</option>
+            </select>
+            <span class="error-msg" id="stateError">Please select your state.</span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address *</label>
+            <input type="text" id="email" name="email">
+            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile Phone *</label>
+            <input type="text" id="phone" name="phone" placeholder="04XX XXX XXX">
+            <span class="error-msg" id="phoneError">Please enter a valid mobile number.</span>
+          </div>
+
+        </fieldset>
+
+      </form>
     </div>
   </main>
 
