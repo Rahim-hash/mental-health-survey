@@ -188,3 +188,23 @@ textarea {
 .field.invalid .error-msg {
   display: block;
 }
+
+/* responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 15px;
+  }
+
+  .likert-table {
+    font-size: 12px;
+  }
+
+  .likert-table th,
+  .likert-table td {
+    padding: 4px 2px;
+  }
+
+  .site-header h1 {
+    font-size: 20px;
+  }
+}
