@@ -6,7 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    console.log("form submitted - validation will go here");
+    var isValid = true;
+
+    // validate full name
+    var fullName = document.getElementById("fullName");
+    var fullNameField = fullName.closest(".field");
+
+    if (fullName.value.trim() === "") {
+      fullNameField.classList.add("invalid");
+      isValid = false;
+    } else {
+      fullNameField.classList.remove("invalid");
+    }
+
+    if (isValid) {
+      console.log("full name is valid");
+    }
+
   });
 
 });
