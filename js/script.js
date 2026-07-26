@@ -58,8 +58,20 @@ document.addEventListener("DOMContentLoaded", function () {
       stateField.classList.remove("invalid");
     }
 
+    // validate email
+    var email = document.getElementById("email");
+    var emailField = email.closest(".field");
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email.value.trim())) {
+      emailField.classList.add("invalid");
+      isValid = false;
+    } else {
+      emailField.classList.remove("invalid");
+    }
+
     if (isValid) {
-      console.log("full name, sex, age group, and state are valid");
+      console.log("all fields checked so far are valid");
     }
 
   });
