@@ -70,8 +70,20 @@ document.addEventListener("DOMContentLoaded", function () {
       emailField.classList.remove("invalid");
     }
 
+    // validate mobile phone
+    var phone = document.getElementById("phone");
+    var phoneField = phone.closest(".field");
+    var phonePattern = /^04[\d]{2}[\s]?[\d]{3}[\s]?[\d]{3}$/;
+
+    if (!phonePattern.test(phone.value.trim())) {
+      phoneField.classList.add("invalid");
+      isValid = false;
+    } else {
+      phoneField.classList.remove("invalid");
+    }
+
     if (isValid) {
-      console.log("all fields checked so far are valid");
+      console.log("all participant fields are valid");
     }
 
   });
