@@ -2,6 +2,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   var form = document.getElementById("surveyForm");
+  var resultsSection = document.getElementById("resultsSection");
+  var resultsContent = document.getElementById("resultsContent");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -22,9 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // validate sex (radio buttons)
     var sexOptions = document.getElementsByName("sex");
     var sexChecked = false;
+    var sexValue = "";
     for (var i = 0; i < sexOptions.length; i++) {
       if (sexOptions[i].checked) {
         sexChecked = true;
+        sexValue = sexOptions[i].value;
       }
     }
     var sexField = sexOptions[0].closest(".field");
@@ -82,8 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
       phoneField.classList.remove("invalid");
     }
 
+    // if everything is valid, display the results
     if (isValid) {
-      console.log("all participant fields are valid");
+
+      var html = "<table class='results-table'>";
+      html += "<tr><th>Full Name</th><td>" + fullName.value + "</td></tr>";
+      html += "<tr><th>Sex</th><td>" + sexValue + "</td></tr>";
+      html += "<tr><th>Age Group</th><td>" + ageGroup.value + "</td></tr>";
+      html += "<tr><th>State</th><td>" + state.value + "</td></tr>";
+      html += "<tr><th>Email</th><td>" + email.value + "</td></tr>";
+      html += "<tr><th>Mobile Phone</th><td>" + phone.value + "</td></tr>";
+      html += "</table>";
+
+      resultsContent.innerHTML = html;
+
+      form.style.display = "none";
+      resultsSection.style.display = "block";
     }
 
   });
