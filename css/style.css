@@ -208,3 +208,26 @@ textarea {
     font-size: 20px;
   }
 }
+
+/* results section */
+#resultsSection {
+  display: none;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.results-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+  padding: 8px;
+  color: #1F4040;
+}
+
+.results-table td {
+  padding: 8px;
+  border-bottom: 1px solid #cccccc;
+}
